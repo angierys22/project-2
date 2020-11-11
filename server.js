@@ -45,10 +45,10 @@ app.use(errorHandler);
 
 // drops all tables on eevery restart
 db.sequelize.sync({ force: true }).then(async () => {
-   // seed db
-   await seed(db.User);
-   await seed(db.Exercise);
-   await seed(db.Journal);
+   // // seed db
+   // await seed(db.User);
+   // await seed(db.Exercise);
+   // await seed(db.Journal);
 
    app.listen(PORT, () => {
       console.log("Web server started on http://localhost:%s", PORT);
