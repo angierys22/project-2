@@ -2,7 +2,7 @@ const express = require("express");
 const compression = require("compression");
 const apiRoutes = require("./routes/api-routes");
 const htmlRoutes = require("./routes/html-routes");
-// const db = require("./models");
+const db = require("./models");
 // const seed = require("./utils/seed");
 const errorHandler = require("./utils/errorHandler");
 
@@ -36,18 +36,21 @@ app.use(htmlRoutes);
 // error handling
 app.use(errorHandler);
 
-app.listen(PORT, () => {
-   console.log("Web server started on http://localhost:%s", PORT);
-});
+//no database version
+// app.listen(PORT, () => {
+//    console.log("Web server started on http://localhost:%s", PORT);
+// });
 
 // reserved for database connection 
 
-// // drops all tables on eevery restart
-// db.sequelize.sync({ force: true }).then(async () => {
-//    // seed db
-//    await seed(db.Test);
+// drops all tables on eevery restart
+db.sequelize.sync({ force: true }).then(async () => {
+   // // seed db
+   // await seed(db.User);
+   // await seed(db.Exercise);
+   // await seed(db.Journal);
 
-//    app.listen(PORT, () => {
-//       console.log("🌎 => live on http://localhost:%s", PORT);
-//    });
-// });
+   app.listen(PORT, () => {
+      console.log("Web server started on http://localhost:%s", PORT);
+   });
+});
