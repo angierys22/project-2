@@ -7,6 +7,10 @@ router.get("/", (req, res) => {
    res.render("index");
 });
 
+router.get("/gym", (req, res) => {
+   res.render("gym");
+});
+
 // // get comments from db and send to template
 // db.Test.findAll({})
 //    .then(comments => res.render("index", { comments: comments }))
