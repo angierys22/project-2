@@ -32,10 +32,53 @@ router.get("/:id",(req,res,next)=>{
 });
 
 //Post a new entry
-// router.post("/",(req,res,next)=>{
-//    db.Journal.create({
+router.post("/",(req,res,next)=>{
+   db.Journal.create({
+      title: req.body.title,
+      body: req.body.body,
 
-//    });
-// });
+   })
+      .then((results)=>{
+         res.json(results);
+      })
+      .catch((err)=>{
+         res.status(500);
+         next(err);
+      });
+});
+
+//Update an entry
+router.put("/:id",(req,res,next)=> {
+   db.Journal.update(
+      req.body,
+      {
+         where: {
+            id: req.params.id,
+         }
+      })
+      .then((results)=>{
+         res.json(results);
+      })
+      .catch((err)=>{
+         res.status(500);
+         next(err);
+      });
+});
+
+//Delete an entry
+router.delete("/:id",(req,res,next)=> {
+   db.Journal.destroy({
+      where: {
+         id: req.params.id,
+      }
+   })
+      .then((results)=>{
+         res.json(results);
+      })
+      .catch((err)=>{
+         res.status(500);
+         next(err);
+      });
+});
 
 module.exports = router;
