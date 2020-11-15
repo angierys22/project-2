@@ -13,6 +13,9 @@ router.get("/gym", (req, res) => {
 router.get("/JE", (req, res) => {
    res.render("JE");
 });
+router.get("/exercise", (req, res) => {
+   res.render("exercise");
+});
 // // get comments from db and send to template
 // db.Test.findAll({})
 //    .then(comments => res.render("index", { comments: comments }))

@@ -1,31 +1,9 @@
 <header>
-  <div class="collapse bg-dark" id="navbarHeader">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 col-md-7 py-4">
-          <h4 class="text-white">About</h4>
-          <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
-        </div>
-        <div class="col-sm-4 offset-md-1 py-4">
-          <h4 class="text-white">Contact</h4>
-          <ul class="list-unstyled">
-            <li><a href="#" class="text-white">Follow on Twitter</a></li>
-            <li><a href="#" class="text-white">Like on Facebook</a></li>
-            <li><a href="#" class="text-white">Email me</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
   <div class="navbar navbar-dark bg-dark shadow-sm">
     <div class="container d-flex justify-content-between">
       <a href="#" class="navbar-brand d-flex align-items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2" viewBox="0 0 24 24" focusable="false"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-        <img src="/public/assets/img/Hyfit-Logo-White.png" alt="HyFit Logo">
+        <img class="logo" src="./assets/img/Hyfit-Logo-White.png" alt="HyFit Logo">
       </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
     </div>
   </div>
 </header>
@@ -34,14 +12,13 @@
 
   <section class="jumbotron text-center">
     <div class="container">
-      <img src="/public/assets/img/Hyfit-Logo-1.png" alt="HyFit Icon"> 
-      <p class="lead text-muted">Trouble finding out where to start working out? Well we want to introduce you to HyFit. Our web application designed to help you workout at home and at the gym! Don't worry about not knowing how to execute a desired workout, here in HyFit we demonstrate you how to execute the best home and gym workouts.</p>
+      <img class="logo2" src="./assets/img/Hyfit-Logo-1.png" alt="HyFit Icon"> 
       <p>
-        <a href="/" class="btn btn-primary my-2">Home Workouts</a>
-        <a class="nav-link active" href="/gym"> Gym Workouts</a>
-        <a class="nav-link active" href="/JE">Journal Entries</a>
-
+        <a class="btn btn-primary my-2" href="/">Home Workouts</a>
+        <a class="btn btn-secondary my-2" href="/gym"> Gym Workouts</a>
+        <a class="btn btn-secondary my-2" href="/JE">Journal Entries</a>
       </p>
+      <p class="lead text-muted">Trouble finding out where to start working out? Well we want to introduce you to HyFit. Our web application designed to help you workout at home and at the gym! Don't worry about not knowing how to execute a desired workout, here in HyFit we demonstrate you how to execute the best home and gym workouts.</p>
     </div>
   </section>
 
@@ -51,7 +28,7 @@
       <div class="row">
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Cardio</text></svg>
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#8998ad"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Cardio</text></svg>
             <div class="card-body">
               <div class="d-flex justify-content-between align-items-center">
 
@@ -62,7 +39,7 @@
         </div>
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Chest</text></svg>
+            <a href="/exercise"><svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Abs</title><rect width="100%" height="100%" fill="#8998ad"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Abs</text></svg></a>
             <div class="card-body">
               <div class="d-flex justify-content-between align-items-center">
          
@@ -70,10 +47,11 @@
               </div>
             </div>
           </div>
+          </a>
         </div>
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Back</text></svg>
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#8998ad"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Back</text></svg>
             <div class="card-body">
               <div class="d-flex justify-content-between align-items-center">
                 <small class="text-muted">Home Workout</small>
@@ -84,7 +62,7 @@
 
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Arm</text></svg>
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#8998ad"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Arm</text></svg>
             <div class="card-body">
 
               <div class="d-flex justify-content-between align-items-center">
@@ -96,7 +74,7 @@
         </div>
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Abs</text></svg>
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#8998ad"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Abs</text></svg>
             <div class="card-body">
               <div class="d-flex justify-content-between align-items-center">
                 <small class="text-muted">Home Workout</small>
@@ -106,7 +84,7 @@
         </div>
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Legs</text></svg>
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#8998ad"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Legs</text></svg>
             <div class="card-body">
               <div class="d-flex justify-content-between align-items-center">
 
@@ -132,8 +110,10 @@
 <footer class="text-muted">
   <div class="container">
     <p class="float-right">
-      <a href="#">Back to top</a>
+      <a href="#" style="color: #6c757d;">Back to top</a>
     </p>
      &copy; 2020 HyFit, Inc. | All Rights Reserved
   </div>
+
+
 </footer>
