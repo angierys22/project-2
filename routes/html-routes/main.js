@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-// const db = require("../../models");
+const db = require("../../models");
 
 // routing (html) /commnets
 router.get("/", (req, res) => {
@@ -10,8 +10,12 @@ router.get("/", (req, res) => {
 router.get("/gym", (req, res) => {
    res.render("gym");
 });
+
+// JE routes
 router.get("/JE", (req, res) => {
-   res.render("JE");
+   db.JE.findAll
+   .then( JEdata=> res.render("JE", {JEdata:JEdata}));
+  
 });
 // // get comments from db and send to template
 // db.Test.findAll({})
