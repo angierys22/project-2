@@ -132,14 +132,14 @@
     border-radius: 3px;
     padding: 5px 10px;
     color: white;
-    background: rgb(51, 51, 51);
+    background: #000000;
     border: 0;
     cursor: pointer;
     transition: opacity 0.3s linear;
   }
   
   #JEList li button:last-child {
-    background: #ff7f7f;
+    background: #6c757d;
   }
   
   #JEList li button:hover {
