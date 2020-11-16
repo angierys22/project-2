@@ -12,3 +12,17 @@
       font-size: 3.5rem;
     }
   }
+
+  .logo {
+    width: 15%;
+  }
+
+  .logo2 {
+    width: 25%;
+    padding-bottom: 20px;
+  }
+
+  .btn-primary {
+    background-color: #000000;
+    border-color: #000000;
+  }

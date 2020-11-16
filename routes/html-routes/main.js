@@ -17,6 +17,9 @@ router.get("/JE", (req, res) => {
    .then( JEdata=> res.render("JE", {JEdata:JEdata}));
   
 });
+router.get("/exercise", (req, res) => {
+   res.render("exercise");
+});
 // // get comments from db and send to template
 // db.Test.findAll({})
 //    .then(comments => res.render("index", { comments: comments }))
