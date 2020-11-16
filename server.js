@@ -1,3 +1,4 @@
+const config = require("./config");
 const express = require("express");
 const compression = require("compression");
 const apiRoutes = require("./routes/api-routes");
@@ -28,8 +29,6 @@ app.engine(
 );
 app.set("view engine", "handlebars");
 
-// var routes = require("./controllers/burgersController.js");
-
 app.use("/api", apiRoutes);
 app.use(htmlRoutes);
 
@@ -43,14 +42,9 @@ app.use(errorHandler);
 
 // reserved for database connection 
 
-// drops all tables on eevery restart
-db.sequelize.sync({ force: true }).then(async () => {
-   // // seed db
-   // await seed(db.User);
-   // await seed(db.Exercise);
-   // await seed(db.Journal);
-
+// drops all tables on every restart if config.sync
+db.sequelize.sync({ force: config.sync }).then(async () => {
    app.listen(PORT, () => {
       console.log("Web server started on http://localhost:%s", PORT);
    });
-});
+}).catch((err)=> {throw err;});
