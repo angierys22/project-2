@@ -1,8 +1,12 @@
 "use strict";
 
+require("dotenv").config();
+
+// let sequelize;
 module.exports = {
    up: async (queryInterface, Sequelize) => {
-      return await queryInterface.bulkInsert("User", [{
+     console.log(Sequelize);
+      return await queryInterface.bulkInsert("Users", [{
          firstName: "John",
          lastName: "Doe",
          eMail: "John.Doe@example.com",
