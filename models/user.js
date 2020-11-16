@@ -17,6 +17,8 @@ module.exports = function (sequlize, DataTypes) {
             isEmail: true,
          },
       }
-   });
+   },
+   {timestamps: false}
+   );
    return User;
 };
