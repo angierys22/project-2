@@ -1,5 +1,4 @@
 const express = require("express");
-const { resolveConfig } = require("prettier");
 const db = require("../../models");
 const router = express.Router();
 // const db = require("../../models");
