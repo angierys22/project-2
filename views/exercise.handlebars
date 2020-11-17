@@ -29,7 +29,7 @@
       <!--PLACE HOLDER IMAGE-->
       <img class="headerimg" src="/assets/img/{{equipment}}/{{muscleGroup}}-{{equipment}}.jpg" alt="HyFit Workout">
       {{#each exercises}}
-      <div class="btn btn-primary exercise-btn">{{dataValues.name}}</div>
+      <div class="btn btn-primary exercise-btn" data-exercise="{{dataValues.name}}">{{dataValues.name}}</div>
       {{/each}}
       <p>Pick four workouts and do 3 sets of 10 reps</p>
     </div>
@@ -38,18 +38,24 @@
       {{!-- <form id="journal"> --}}
       <form>
         <div class="form-group">
+          <label for="inputUser">User</label>
+      <select id="inputUser" class="form-control">
+        <option selected>Choose...</option>
+      </select>
+        </div>
+        <div class="form-group">
           <label for="journalTitle">Workout Title</label>
-          <input type="text" class="form-control" name="title" placeholder="{{muscleGroup}}-{{equipment}}-{{getDate}}"
+          <input type="text" class="form-control" name="title" id="journal-title" placeholder="{{muscleGroup}}-{{equipment}}-{{getDate}}"
             readonly>
         </div>
         <div class="form-group">
 
           <label for="journalBody">Notes</label>
           <textarea type="text" class="form-control form-control-lg" name="body" placeholder="Enter Workout Notes"
-            rows="4"></textarea>
+            rows="4" id="journal-body"></textarea>
 
         </div>
-        <button type="submit" class="btn btn-primary" name="submit" value="submit">Submit</button>
+        <button type="submit" class="btn btn-primary" name="submit" value="submit" id="journal-submit">Submit</button>
       </form>
     </div>
   </div>
@@ -63,5 +69,4 @@
     </p>
     &copy; 2020 HyFit, Inc. | All Rights Reserved
   </div>
-  <script type="text/javascript" src="/assets/js/execise.js"></script>
 </footer>

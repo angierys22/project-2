@@ -17,18 +17,21 @@ router.get("/JE", (req, res) => {
 });
 router.get("/exercise/:equipment/:id", (req, res) => {
    db.Exercise.findAll({
-      where:{
-        muscleGroup: req.params.id, 
-        equipment: req.params.equipment
-      }
-   })
-   .then ((exercises)=>{
-      let muscles= req.params.id 
-      let equipment= req.params.equipment
-      muscles= muscles.charAt(0).toUpperCase() + muscles.slice(1);
-      equipment= equipment.charAt(0).toUpperCase() + equipment.slice(1);
-      res.render("exercise", {exercises:exercises, muscleGroup:muscles, equipment:equipment});
-   })
+      where: {
+         muscleGroup: req.params.id,
+         equipment: req.params.equipment,
+      },
+   }).then((exercises) => {
+      let muscles = req.params.id;
+      let equipment = req.params.equipment;
+      muscles = muscles.charAt(0).toUpperCase() + muscles.slice(1);
+      equipment = equipment.charAt(0).toUpperCase() + equipment.slice(1);
+      res.render("exercise", {
+         exercises: exercises,
+         muscleGroup: muscles,
+         equipment: equipment,
+      });
+   });
 });
 // // get comments from db and send to template
 // db.Test.findAll({})
