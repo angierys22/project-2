@@ -6,12 +6,14 @@ const htmlRoutes = require("./routes/html-routes");
 const db = require("./models");
 // const seed = require("./utils/seed");
 const errorHandler = require("./utils/errorHandler");
-
+const path = require("path");
 const PORT = process.env.PORT || 3000;
 const app = express();
 
 // Serve static content for the app from the "public" directory in the application directory.
-app.use(express.static("public"));
+// app.use(express.static("public"));
+
+app.use(express.static(path.join(__dirname, '/public')));
 
 // Parse application body
 app.use(express.urlencoded({ extended: true }));

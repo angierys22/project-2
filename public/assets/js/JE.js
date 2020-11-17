@@ -1,9 +1,11 @@
+// const { text } = require("express");
+// const { post } = require("../../../routes/api-routes");
 
 const form = document.querySelector("#JEForm");
 const input = document.querySelector("input");
 const ul = document.querySelector("#JEList");
 
-
+console.log("here in js");
 /*
 1. create li
 ------------
@@ -27,7 +29,6 @@ function createLi() {
   const removeBtn = document.createElement('button');
   removeBtn.textContent = 'remove';
   
-  
   li.appendChild(user)
   li.appendChild(title)
   li.appendChild(journalInput)
@@ -46,8 +47,19 @@ form.addEventListener("submit", (event) => {
    if(input.value === "") {
       alert("Journal is empty.");
    } else {
+     // save data to mysql table
+     console.log('inside of ajad call');
      const JournalEntry = document.getElementsByTagName('input');
      const JournalObject = {title:JournalEntry[1].value,body:JournalEntry[2].value}
+     $.ajax({
+      url: "/journal",
+      type: "POST",
+      data: JournalObject,
+      dataType: text,
+      sucess: function(result){
+        console.log("in ajax call");
+      }})
+     
      // ul.appendChild(li);
    }
 
@@ -66,7 +78,20 @@ ul.addEventListener("click", (event) => {
       const li = button.parentNode;
       const ul = li.parentNode;
       if(button.textContent === "remove") {
-         ul.removeChild(li);
+         ul.removeChild(li); 
+//delete data from mysql database
+         $.ajax("/:id",
+         {
+           type: "DELETE",
+          data: JournalObject,
+    
+         }
+         ).then(function(){
+           location.reload()
+         }) 
+       
+    
+      
 
       } else if(button.textContent === "edit") {
          const span = li.firstElementChild;
