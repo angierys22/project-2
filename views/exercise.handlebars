@@ -2,7 +2,7 @@
   <div class="navbar navbar-dark bg-dark shadow-sm">
     <div class="container d-flex justify-content-between">
       <a href="#" class="navbar-brand d-flex align-items-center">
-        <img class="logo" src="./assets/img/Hyfit-Logo-White.png" alt="HyFit Logo">
+        <img class="logo" src="/assets/img/Hyfit-Logo-White.png" alt="HyFit Logo">
       </a>
     </div>
   </div>
@@ -12,22 +12,25 @@
 
   <section class="jumbotron text-center">
     <div class="container">
-      <img class="logo2" src="./assets/img/Hyfit-Logo-1.png" alt="HyFit Icon"> 
+      <img class="logo2" src="/assets/img/Hyfit-Logo-1.png" alt="HyFit Icon"> 
       <p>
         <a class="btn btn-secondary my-2" href="/">Home Workouts</a>
         <a class="btn btn-secondary my-2" href="/gym">Gym Workouts</a>
         <a class="btn btn-secondary my-2" href="/JE">Journal Entries</a>
       </p>
       <!--PLACE HOLDER HEADER-->
-      <p class="lead text-muted">Abs</p>
+      <p class="lead text-muted">{{muscleGroup}}</p>
+
     </div>
   </section>
 
   <div>
     <div class="container">
       <!--PLACE HOLDER IMAGE-->
-      <img class="headerimg" src="./assets/img/Gym/Abs-Gym.jpg" alt="HyFit Icon"> 
-      <p>Hanging Raises	| Bench Leg Pull-In	| Ball Climbers	| Medicine Ball V-Ups	| Dumbbell Side Bend	| Hip Raise	| Weighted Twists	| Kneeling Cable Crunch</p>
+      <img class="headerimg" src="/assets/img/{{equipment}}/{{muscleGroup}}-{{equipment}}.jpg" alt="HyFit Workout"> 
+      {{#each exercises}}
+      <p>{{dataValues.name}}</p>
+      {{/each}}
       <p>Pick four workouts and do 3 sets of 10 reps</p>
     </div>
     <!--NOTE SECTION-->
