@@ -36,20 +36,43 @@
           <div id="wrapper">
             <div class="JournalEntry">
               <header id="header">
-                <h1>Journal Entry</h1>
+                <h1>Journal Entries</h1>
               </header>
               <main class="main">	
-                <form id="JEForm">
+                {{!-- <form id="JEForm">
                   <input type="text" name="name" placeholder="Enter New Journal">
                   <button type="submit" name="submit" value="submit">Submit</button>
-                </form>
-               
-                <ul id="JEList">
-                  <li>
-                    <span>Example</span>
+                </form> --}}
+{{!--                
+                <ul id="JEList"> --}}
+
+                  {{#each journalEntries}}
+                  <div class="card col-md-4">
+                    <div class="card-body">
+                      <div class="card-header">
+                        {{dataValues.User}} 
+                      </div>
+                      <div class="card-title">
+                        {{dataValues.title}}
+
+                      </div>
+                      <div class="card-text">
+                        {{dataValues.body}} 
+
+                      </div>
+                      <div class="card-footer">
+                        {{dataValues.createdAt}}
+                      </div>
+                    </div>
+                  </div>
+                  
+
+                  {{/each}}
+                  {{!-- <li>
+                    <span></span>
                     <button>edit</button>
                     <button>remove</button>
-                  </li> 
+                  </li>  --}}
                 </ul>	
               </main>
             </div>

@@ -13,7 +13,13 @@ router.get("/gym", (req, res) => {
    res.render("gym");
 });
 router.get("/JE", (req, res) => {
-   res.render("JE");
+   db.Journal.findAll({
+      include: [db.User],
+   }).then((journalEntries) => {
+      res.render("JE", {
+         journalEntries: journalEntries,
+      });
+   });
 });
 router.get("/exercise/:equipment/:id", (req, res) => {
    db.Exercise.findAll({
