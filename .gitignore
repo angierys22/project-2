@@ -1,8 +1,8 @@
 # VS Code
-.vscode
+.vscode/
 
 # MacOS cruft
-.DS_Store
+.DS_Store/
 # Logs
 logs
 *.log
