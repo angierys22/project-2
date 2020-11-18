@@ -90,3 +90,7 @@ p {
 .bd-placeholder-img {
   font-size: 30px !important; 
 }
+
+.btn-primary {
+  margin-bottom: 20px !important;  
+}
