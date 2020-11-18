@@ -5,12 +5,12 @@ const ul = document.querySelector("#JEList");
 /*
 1. create li
 ------------
-*/ 
+*/
+
 function createLi() {
    const li = document.createElement("li");
    const span = document.createElement("span");
    span.textContent = input.value;
-  
 
    const editBtn = document.createElement("button");
    editBtn.textContent = "edit";
@@ -29,27 +29,26 @@ form.addEventListener("submit", (event) => {
 
    const li = createLi();
 
-   if(input.value === "") {
+   if (input.value === "") {
       alert("Journal is empty.");
    } else {
       ul.appendChild(li);
    }
-}); 
-
-
+});
 
 /*
 2. Button actions
 -----------------
-*/ 
+*/
+
 ul.addEventListener("click", (event) => {
-   if(event.target.tagName === "BUTTON") {
+   if (event.target.tagName === "BUTTON") {
       const button = event.target;
       const li = button.parentNode;
       const ul = li.parentNode;
-      if(button.textContent === "remove") {
+      if (button.textContent === "remove") {
          ul.removeChild(li);
-      } else if(button.textContent === "edit") {
+      } else if (button.textContent === "edit") {
          const span = li.firstElementChild;
          const input = document.createElement("input");
          input.type = "text";
@@ -57,7 +56,7 @@ ul.addEventListener("click", (event) => {
          li.insertBefore(input, span);
          li.removeChild(span);
          button.textContent = "save";
-      } else if(button.textContent === "save") {
+      } else if (button.textContent === "save") {
          const input = li.firstElementChild;
          const span = document.createElement("span");
          span.textContent = input.value;
@@ -71,9 +70,7 @@ ul.addEventListener("click", (event) => {
 /*
 4. create and append elements
 -----------------------------
-*/ 
+*/
+
 const div = document.createElement("div");
 div.className = "showHide";
-
-
-
