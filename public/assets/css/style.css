@@ -86,3 +86,7 @@ p {
 .card-title {
    border-bottom: solid #000;
 }
+
+.bd-placeholder-img {
+  font-size: 30px !important; 
+}
