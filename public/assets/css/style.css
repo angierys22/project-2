@@ -82,3 +82,7 @@ p {
 .execise-btn {
    margin: auto;
 }
+
+.card-title {
+   border-bottom: solid #000;
+}
