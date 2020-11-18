@@ -45,12 +45,13 @@
                 </form> --}}
 {{!--                
                 <ul id="JEList"> --}}
+                  <div class="row">
 
                   {{#each journalEntries}}
                   <div class="card col-md-4">
                     <div class="card-body">
-                      <div class="card-header">
-                        {{dataValues.User}} 
+                      <div class="card-header text-white bg-dark mb-3">
+                        {{getColumn dataValues.User 'firstName'}} {{getColumn dataValues.User 'lastName'}} 
                       </div>
                       <div class="card-title">
                         {{dataValues.title}}
@@ -58,16 +59,16 @@
                       </div>
                       <div class="card-text">
                         {{dataValues.body}} 
-
                       </div>
                       <div class="card-footer">
-                        {{dataValues.createdAt}}
+                        <button class="btn btn-dark journal-del-button" data-id="{{dataValues.id}}" >Delete</button>
                       </div>
                     </div>
                   </div>
-                  
-
                   {{/each}}
+
+                  </div>
+                  
                   {{!-- <li>
                     <span></span>
                     <button>edit</button>
